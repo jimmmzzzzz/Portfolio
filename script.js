@@ -82,3 +82,24 @@ gsap.utils.toArray('.section').forEach((section) => {
     }
   });
 });
+
+function toggleMenu() {
+  const menu = document.getElementById("dropdown-menu");
+  menu.classList.toggle("show");
+}
+
+function closeMenu() {
+  const menu = document.getElementById("dropdown-menu");
+  if (menu.classList.contains("show")) {
+    menu.classList.remove("show");
+  }
+}
+
+document.addEventListener("click", (event) => {
+  const menu = document.getElementById("dropdown-menu");
+  const btn = document.querySelector(".hamburger-btn");
+  
+  if (menu && btn && !menu.contains(event.target) && !btn.contains(event.target)) {
+    menu.classList.remove("show");
+  }
+});
