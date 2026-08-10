@@ -209,6 +209,56 @@ body {
 
 .social-links a:hover { color: var(--accent); }
 
+.hamburger-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.hamburger-btn:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 200px;
+    background: rgba(16, 16, 16, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 8px;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-links li a:hover {
+    background: rgba(0, 174, 239, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
 footer {
   text-align: center;
   padding: 3rem 0;
