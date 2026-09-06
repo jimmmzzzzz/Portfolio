@@ -2,6 +2,10 @@
 
 A minimal black-and-white portfolio presenting Feyijimi's software projects, technical range, experience and contact information.
 
+## Live site
+
+[View the portfolio](https://jimmmzzzzz.github.io/Portfolio/)
+
 ## Built with
 
 - Semantic HTML5
