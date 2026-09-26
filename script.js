@@ -13,6 +13,14 @@ navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click'
   menuButton.textContent = 'Menu';
 }));
 
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
+    navigation.classList.remove('is-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.textContent = 'Menu';
+  }
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
 const revealTargets = document.querySelectorAll('.section-heading, .project, .about-grid, .capabilities, .timeline-item');
 
