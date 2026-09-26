@@ -18,6 +18,7 @@ window.addEventListener('keydown', (event) => {
     navigation.classList.remove('is-open');
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.textContent = 'Menu';
+    menuButton.focus();
   }
 });
 
