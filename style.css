@@ -42,22 +42,29 @@ a { color:inherit; } button { font:inherit; }
 .tag-list { display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; margin-top:1.5rem; }
 .tag-list li { border:1px solid var(--line); border-radius:100px; font-family:"DM Mono",monospace; font-size:.68rem; padding:.3rem .6rem; text-transform:uppercase; }
 .text-link { display:inline-flex; gap:.7rem; margin-top:2.5rem; text-decoration:none; }
-.about-section { background:var(--black); color:var(--white); max-width:none; padding-left:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); padding-right:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); }
+.about-section { background:var(--white); color:var(--black); max-width:none; padding-left:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); padding-right:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); }
 .about-grid { display:grid; gap:4rem; grid-template-columns:1.1fr 1fr; }
 .about-lead { font-size:clamp(1.75rem,3.2vw,3.2rem); letter-spacing:-.04em; line-height:1.2; }
-.about-copy { color:#b7b7b2; font-size:1.08rem; }
+.about-copy { color:#555; font-size:1.08rem; }
 .about-copy p+p { margin-top:1.5rem; }
-.capabilities { border-top:1px solid #3b3b3b; display:grid; gap:2rem; grid-template-columns:repeat(4,1fr); margin-top:6rem; padding-top:2rem; }
+.capabilities { border-top:1px solid var(--line); display:grid; gap:2rem; grid-template-columns:repeat(4,1fr); margin-top:6rem; padding-top:2rem; }
 .capabilities h3 { font-family:"DM Mono",monospace; font-size:.74rem; font-weight:400; margin-bottom:1rem; text-transform:uppercase; }
-.capabilities p { color:#a8a8a3; font-size:.9rem; }
+.capabilities p { color:#666; font-size:.9rem; }
+
+.experience-section { background:var(--black); color:var(--white); max-width:none; padding-left:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); padding-right:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); }
+.experience-section .timeline { border-top-color:#3b3b3b; }
+.experience-section .timeline-item { border-bottom-color:#3b3b3b; }
+.experience-section .timeline-date { color:#9d9d98; }
+.experience-section .timeline-item p { color:#b8b8b3; }
+
 .timeline-item { border-bottom:1px solid var(--line); display:grid; gap:2rem; grid-template-columns:1fr 3fr; padding:2.5rem 0; }
 .timeline-item h3 { font-size:1.5rem; font-weight:500; letter-spacing:-.025em; }
 .timeline-item p { color:#555; margin-top:.8rem; max-width:650px; }
-.contact-section { background:var(--black); color:var(--white); max-width:none; padding:8rem max(3rem,calc((100vw - var(--max-width))/2 + 3rem)) 3rem; }
+.contact-section { background:var(--white); color:var(--black); max-width:none; padding:8rem max(3rem,calc((100vw - var(--max-width))/2 + 3rem)) 3rem; }
 .contact-section h2 { font-size:clamp(3rem,8vw,8.5rem); font-weight:500; letter-spacing:-.075em; line-height:.92; margin:4rem 0; }
-.contact-email { align-items:center; border-bottom:1px solid #555; display:flex; font-size:clamp(1rem,2.2vw,2rem); justify-content:space-between; padding-bottom:1rem; text-decoration:none; }
+.contact-email { align-items:center; border-bottom:1px solid var(--line); display:flex; font-size:clamp(1rem,2.2vw,2rem); justify-content:space-between; padding-bottom:1rem; text-decoration:none; }
 .contact-footer { align-items:end; display:flex; justify-content:space-between; margin-top:5rem; }
-.contact-footer>p { color:#aaa; max-width:450px; }
+.contact-footer>p { color:#666; max-width:450px; }
 .social-links { display:flex; gap:1.5rem; }
 .social-links a { font-size:.8rem; text-decoration:none; text-transform:uppercase; }
 .site-footer { align-items:center; background:var(--black); border-top:1px solid #333; color:#999; display:flex; font-family:"DM Mono",monospace; font-size:.7rem; justify-content:space-between; max-width:none; padding:1.5rem max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); text-transform:uppercase; }
@@ -65,15 +72,15 @@ a { color:inherit; } button { font:inherit; }
 .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease,transform .7s ease; }
 .reveal.is-visible { opacity:1; transform:none; }
 
-.design-section { overflow:hidden; }
+.design-section { background:var(--black); color:var(--white); max-width:none; overflow:hidden; padding-left:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); padding-right:max(3rem,calc((100vw - var(--max-width))/2 + 3rem)); }
 .design-heading { grid-template-columns:minmax(150px,.7fr) minmax(0,2.3fr); }
 .design-heading h2 { font-size:clamp(2.3rem,4.2vw,4.8rem); max-width:780px; }
 
 .design-showcase { align-items:center; display:grid; gap:clamp(2rem,4vw,5rem); grid-template-columns:minmax(245px,.72fr) minmax(390px,1.28fr); }
 .design-copy { max-width:470px; }
-.design-kicker { color:var(--grey); font-family:"DM Mono",monospace; font-size:.72rem; letter-spacing:.08em; margin-bottom:1rem; text-transform:uppercase; }
+.design-kicker { color:#9d9d98; font-family:"DM Mono",monospace; font-size:.72rem; letter-spacing:.08em; margin-bottom:1rem; text-transform:uppercase; }
 .design-copy h3 { font-size:clamp(2.4rem,4vw,4.6rem); font-weight:500; letter-spacing:-.06em; line-height:.95; margin-bottom:1.35rem; }
-.design-copy>p:not(.design-kicker) { color:#4d4d4a; font-size:.98rem; line-height:1.7; }
+.design-copy>p:not(.design-kicker) { color:#b8b8b3; font-size:.98rem; line-height:1.7; }
 .design-copy>p+p { margin-top:1rem; }
 
 .design-flower {
@@ -96,9 +103,9 @@ a { color:inherit; } button { font:inherit; }
 .flower-center {
   align-items:center;
   align-self:center;
-  background:var(--black);
+  background:var(--white);
   border-radius:50%;
-  color:var(--white);
+  color:var(--black);
   display:flex;
   flex-direction:column;
   grid-area:center;
@@ -186,7 +193,7 @@ a { color:inherit; } button { font:inherit; }
   .project-links{display:flex;flex-direction:row;flex-wrap:wrap;gap:.65rem;grid-column:1;margin-top:.35rem}
   .project-link{border:1px solid var(--black);flex:1;font-size:.72rem;gap:.75rem;justify-content:space-between;margin:0;min-height:46px;min-width:132px;padding:.7rem .8rem}
   .project:hover{padding-left:0;padding-right:0}
-  .about-section{padding-left:1.15rem;padding-right:1.15rem}
+  .design-section,.about-section,.experience-section{padding-left:1.15rem;padding-right:1.15rem}
   .about-grid{gap:2rem}
   .about-lead{font-size:clamp(1.8rem,8vw,2.7rem)}
   .about-copy{font-size:1rem}
