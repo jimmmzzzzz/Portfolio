@@ -11,6 +11,7 @@ menuButton.addEventListener('click', () => {
 navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
   navigation.classList.remove('is-open');
   menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'Open navigation menu');
   menuButton.textContent = 'Menu';
 }));
 
@@ -18,6 +19,7 @@ window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
     navigation.classList.remove('is-open');
     menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
     menuButton.textContent = 'Menu';
     menuButton.focus();
   }
