@@ -10,7 +10,7 @@ a { color:inherit; } button { font:inherit; }
 .site-nav a,.menu-toggle { font-size:.8rem; font-weight:600; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
 .site-nav a { position:relative; }
 .site-nav a::after { background:currentColor; bottom:-.3rem; content:""; height:1px; left:0; position:absolute; transform:scaleX(0); transform-origin:right; transition:transform .25s ease; width:100%; }
-.site-nav a:hover::after { transform:scaleX(1); transform-origin:left; }
+.site-nav a:hover::after,.site-nav a:focus-visible::after { transform:scaleX(1); transform-origin:left; }
 .menu-toggle { background:none; border:0; cursor:pointer; display:none; }
 .hero,.section,.contact-section,.site-footer { margin:0 auto; max-width:var(--max-width); }
 .hero { display:flex; flex-direction:column; justify-content:space-between; min-height:calc(100svh - 78px); padding:4rem 3rem 3rem; }
