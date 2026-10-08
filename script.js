@@ -3,26 +3,33 @@ const navigation = document.querySelector('.site-nav');
 
 menuButton.setAttribute('aria-label', 'Open navigation menu');
 
-menuButton.addEventListener('click', () => {
-  const open = navigation.classList.toggle('is-open');
+function setMenuOpen(open) {
+  navigation.classList.toggle('is-open', open);
   menuButton.setAttribute('aria-expanded', String(open));
   menuButton.textContent = open ? 'Close' : 'Menu';
   menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+}
+
+menuButton.addEventListener('click', () => {
+  setMenuOpen(!navigation.classList.contains('is-open'));
 });
 
 navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-  navigation.classList.remove('is-open');
-  menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', 'Open navigation menu');
-  menuButton.textContent = 'Menu';
+  setMenuOpen(false);
 }));
+
+// Dismiss the mobile menu when a user taps or clicks outside it.
+document.addEventListener('pointerdown', (event) => {
+  if (navigation.classList.contains('is-open') &&
+      !navigation.contains(event.target) &&
+      !menuButton.contains(event.target)) {
+    setMenuOpen(false);
+  }
+});
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
-    navigation.classList.remove('is-open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Open navigation menu');
-    menuButton.textContent = 'Menu';
+    setMenuOpen(false);
     menuButton.focus();
   }
 });
