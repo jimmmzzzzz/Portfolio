@@ -27,6 +27,11 @@ document.addEventListener('pointerdown', (event) => {
   }
 });
 
+// Clear mobile menu state when switching to the desktop layout.
+window.matchMedia('(min-width: 801px)').addEventListener('change', (event) => {
+  if (event.matches) setMenuOpen(false);
+});
+
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
     setMenuOpen(false);
